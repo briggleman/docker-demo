@@ -1,4 +1,4 @@
-Docker Demo
+Docker Demo [![Build Status](https://travis-ci.org/briggleman/docker-demo.svg?branch=master)](https://travis-ci.org/briggleman/docker-demo)
 ===========
 
 The purpose of this repository is to teach the basics of [Docker](https://www.docker.com/).  The different course topics, building and deploying, service discovery, and orchestration will be covered in different branches with the final project residing in **master**.

@@ -4,7 +4,7 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - pip install -e ."[pbr,test]"
+  - pip install -e ."[pbr,tox,test]"
 # command to run tests
 script:
   - tox
