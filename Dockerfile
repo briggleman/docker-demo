@@ -1,7 +1,9 @@
-MAINTAINER Ben Riggleman
 # use a pre-built version of python
 # debian jessie, slimmed down with only the essentials
 FROM python:3.6.2-slim
+
+# set our image maintainer
+MAINTAINER Ben Riggleman
 
 # expose port 8080, this is how docker knows to map traffic to our container
 EXPOSE 8080
