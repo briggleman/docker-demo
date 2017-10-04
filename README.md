@@ -114,7 +114,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 You can check by going to [http://localhost:8080/v1](http://localhost:8080/v1).  If you see `{"data":"hello world!"}` then everything worked!
 
-Let's stop that container and remove it so we can see how Docker Compose works.  To remove the image (non-gracefully) go:
+Let's stop that container and remove it so we can see how Docker Compose works.  To remove the container (non-gracefully) go:
 
 ```bash
 $ docker rm -f $(docker ps -a -q)
