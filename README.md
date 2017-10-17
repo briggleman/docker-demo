@@ -344,7 +344,7 @@ $ docker start demo
 
 Client Side Service Discovery
 -----------------------------
-Client Side Service Discovery can be very complex.  It is recommend for the purposes of this tutorial that you read [this article](http://microservices.io/patterns/client-side-discovery.html) as []Netflix OSS](https://netflix.github.io/) is a great example of the client requesting a service and being re-routed properly.
+Client Side Service Discovery can be very complex.  It is recommend for the purposes of this tutorial that you read [this article](http://microservices.io/patterns/client-side-discovery.html) as [Netflix OSS](https://netflix.github.io/) is a great example of the client requesting a service and being re-routed properly.
 
 [cssd]: images/cssd.png
 [sssd]: images/sssd.png
