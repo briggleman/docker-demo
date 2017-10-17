@@ -1,0 +1,25 @@
+---
+  - name: deploy app [demo]
+    docker_container:
+      name: docker_demo
+      image: docker-demo:ansible
+      state: "{{ cstate }}"
+      recreate: yes
+      restart_policy: always
+      ports:
+        - "8080:8080"
+
+  - name: deploy load balancer [nginx]
+    docker_container:
+      name: nginx
+      image: nginx:1.13.5
+      state: "{{ cstate }}"
+      recreate: yes
+      restart_policy: always
+      ports:
+        - "80:80"
+      env:
+        HOST_IP: "{{ ansible_default_ipv4.address }}"
+      volumes:
+        - "../template:/template"
+      command: /bin/bash -c "envsubst < /template/demo.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"

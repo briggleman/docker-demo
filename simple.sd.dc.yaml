@@ -1,0 +1,21 @@
+---
+  version: "3"
+  services:
+    # build our demo image from this directory using the Dockerfile
+    demo:
+      build: .
+      restart: always
+      ports:
+        - "8080:8080"
+    # pull and run nginx on port 80
+    nginx:
+      image: nginx:1.13.5-alpine
+      restart: always
+      # map the default.conf file located in this directory into the container
+      # this will be used by nginx to proxy traffic into our demo container
+      volumes:
+        - ./simple.conf:/etc/nginx/conf.d/default.conf
+      ports:
+        - "80:80"
+      links:
+        - demo

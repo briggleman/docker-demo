@@ -106,3 +106,7 @@ venv.bak/
 ### Custom
 # PyCharm Settings
 .idea/
+# .DS_Store files :P
+.DS_Store
+# ansible retry files
+.retry
