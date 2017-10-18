@@ -308,7 +308,7 @@ $ export HOST_IP=$(ifconfig en0 | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f
 Let's bring up our new containers.  To do this we'll use the Docker Compose file named `simple.sd.dc.yaml`, we can tell Docker to use this file by passing the `-f` flag followed by the file name.
 
 ```bash
-docker-compose -f advanced.sd.dc.yaml up -d
+$ docker-compose -f advanced.sd.dc.yaml up -d
 Creating demo ...
 Creating consul ...
 Creating consul
