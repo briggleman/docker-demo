@@ -299,6 +299,12 @@ Similarly, AWS tags can be used as a way of discovering services.
 ### Server Side Service Discovery Docker Compose + Consul (Advanced)
 In this example we will use a key value store to dynamically register a service, see the service listed via Nginx and trace it back to Consul where it is registered.  We will also stop the service to see it get removed from Consul.
 
+To start you will need to set the following environment variable: `HOST_IP`, this can be done easily by executing the following command.
+
+```bash
+$ export HOST_IP=$(ifconfig en0 | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2)
+```
+
 Let's bring up our new containers.  To do this we'll use the Docker Compose file named `simple.sd.dc.yaml`, we can tell Docker to use this file by passing the `-f` flag followed by the file name.
 
 ```bash
