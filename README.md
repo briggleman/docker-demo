@@ -233,7 +233,7 @@ location / {
 Let's bring up our new containers.  To do this we'll use the Docker Compose file named `simple.sd.dc.yaml`, we can tell Docker to use this file by passing the `-f` flag followed by the file name.
 
 ```bash
-docker-compose -f simple.sd.dc.yaml up -d
+$ docker-compose -f simple.sd.dc.yaml up -d
 Creating dockerdemo_demo_1 ...
 Creating dockerdemo_demo_1 ... done
 Creating dockerdemo_nginx_1 ...
